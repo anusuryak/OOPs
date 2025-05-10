@@ -1,1 +1,62 @@
+package Class;
+
+import java.util.*;
+
+class cat {
+	String name, color;
+	int age;
+	float height, weight;
+
+	cat() {
+		name = "Simba";
+		color = "white";
+		System.out.println("Name of the cat(constructor) is:" + name);
+	}
+
+	void getcatdetails() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the name of the cat:");
+		name = sc.next();
+		System.out.println("Enter the color of the cat :");
+		color = sc.next();
+		System.out.println("Enter the age of the cat :");
+		age = sc.nextInt();
+		System.out.println("Enter the height of the cat:");
+		height = sc.nextFloat();
+	}
+
+	void putcatdetails() {
+		System.out.println("Name of the cat is:" + name);
+		System.out.println("Color of the cat is:" + color);
+		System.out.println("Age of the cat is:" + age);
+		System.out.println("Height of the cat is:" + height);
+	}
+
+	void sound() {
+		System.out.println("cat sound is meow:");
+	}
+
+	void eating() {
+		System.out.println("cat drinks milk:");
+	}
+}
+
+public class OOPsClass {
+	public static void main(String[] args) {
+		cat c[] = new cat[100];
+
+		for (int i = 0; i < 2; i++) {
+			c[i] = new cat();
+			c[i].getcatdetails();
+		}
+		System.out.println("get cat details........");
+
+		for (int y = 0; y < 2; y++) {
+			c[y].putcatdetails();
+		}
+		cat c1 = new cat();
+		c1.sound();
+		c1.eating();
+	}
+}
 
